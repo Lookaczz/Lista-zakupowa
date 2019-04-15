@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<pages:PopupPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Shopping.Pop"
+             xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup">
+
+    <StackLayout Margin="12"
+                 Padding="24"
+                 Spacing="24"
+                 BackgroundColor="White"
+                 HorizontalOptions="Center"
+                 VerticalOptions="Center">
+        <StackLayout>
+            <Label Text="Produkt" />
+            <Editor x:Name="Product_Name"/>
+        </StackLayout>
+        <StackLayout>
+            <Label Text="Ilosc"/>
+            <Editor x:Name="Product_Quantity"/>
+        </StackLayout>
+        <Button BackgroundColor="DodgerBlue"
+                FontSize="15"
+                Text="Dodaj do listy"
+                TextColor="White"
+                Clicked="Button_Clicked"/>
+    </StackLayout>
+
+</pages:PopupPage>

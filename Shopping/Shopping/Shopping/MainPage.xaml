@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Shopping"
+             BackgroundColor="Gray"
+             x:Class="Shopping.MainPage">
+
+    <StackLayout>
+        <Grid RowSpacing="30" VerticalOptions="FillAndExpand">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="20*"/>
+                <RowDefinition Height="20*"/>
+                <RowDefinition Height="20*"/>
+                <RowDefinition Height="20*"/>
+                <RowDefinition Height="20*"/>
+            </Grid.RowDefinitions>
+            <Button 
+                x:Name="MojeListy"
+                Text="Moje Listy"
+                Grid.Row="1"
+                HorizontalOptions="CenterAndExpand"
+                WidthRequest="150"
+                HeightRequest="50"
+                BorderWidth="2"
+                BorderRadius="10"
+                BorderColor="AliceBlue"
+                Clicked="MojeListy_Clicked">
+            </Button>
+
+            <Button
+                x:Name="NowaLista"
+                Text="Nowa Lista"
+                HorizontalOptions="CenterAndExpand"
+                Grid.Row="2"
+                WidthRequest="150"
+                HeightRequest="50"
+                BorderWidth="2"
+                BorderRadius="10"
+                BorderColor="AliceBlue"
+                Clicked="NowaLista_Clicked">
+            </Button>
+
+            <Button
+                x:Name="Przepisy"
+                Text="Przepisy"
+                HorizontalOptions="CenterAndExpand"
+                Grid.Row="3"
+                WidthRequest="150"
+                HeightRequest="50"
+                BorderWidth="2"
+                BorderRadius="10"
+                BorderColor="AliceBlue"
+                Clicked="Przepisy_Clicked">
+            </Button>
+        </Grid>
+    </StackLayout>
+
+</ContentPage>

@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:ctrls="clr-namespace:CheckBoxSample.Controls" 
+             BackgroundColor="Gray"
+             x:Class="Shopping.Lista1">
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid>
+                <Grid.RowDefinitions>
+                        <RowDefinition Height="4*" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    
+        <ListView x:Name="listView" Grid.Column="0" Grid.Row="0" ItemSelected="ListView_ItemClick">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Padding="5" Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="Center">
+                            <ctrls:CheckBox x:Name="cbUS"
+                                  IsVisible="{Binding IsVisible}"
+                                  IsChecked="{Binding IsSelected}"
+                                  BorderImageSource="checkborder"
+                                  CheckedBackgroundImageSource="checkcheckedbg"
+                                  CheckmarkImageSource="checkcheckmark" />
+                            <Label Text="{Binding Name}"/>
+                            <Label Text="{Binding Quantity, StringFormat=' {0}'}" 
+                                  TextColor="White" 
+                                  FontSize="Small"
+                                  HorizontalOptions="End" />
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+            <Button
+                Text="Dodaj"
+                Clicked="Button_Clicked"
+                Grid.Row="1"
+                Grid.Column="0"/>
+        </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
+
