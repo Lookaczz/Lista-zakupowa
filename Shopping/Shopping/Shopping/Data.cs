@@ -24,7 +24,6 @@ namespace Shopping
             this.IsVisible = IsVisible;
             this.IsSelected = IsSelected;
         }
-
     }
 
 
@@ -38,7 +37,6 @@ namespace Shopping
             this.ID_List = ID_List;
             this.Name_List = Name_List;
         }
-
     }
 
     public class Data_Listy
